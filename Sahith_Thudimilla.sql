@@ -1,5 +1,5 @@
 
---- 1 Write a SQL query to how many products were sold in February 2019.
+-- 1 Write a SQL query to how many products were sold in February 2019.
 
 SELECT COUNT(*) AS products_sold FROM ecommerce
 WHERE (EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))  = 2 and (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))  = 2019;
