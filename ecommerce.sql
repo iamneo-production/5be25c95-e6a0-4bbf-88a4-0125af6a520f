@@ -17,8 +17,7 @@ SELECT  productname, (EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))
 FROM ecommerce
 WHERE (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) = 2019
 GROUP BY productname,(EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))
-ORDER BY productname, (EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
-
+ORDER BY productname asc;
 
 -- 4 Write a SQL query to count the customers from each country.
 
