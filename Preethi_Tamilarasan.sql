@@ -1,3 +1,4 @@
+set timing on;
 --1.Write a query to display how many products were sold in February 2019.
 
 select count(Productname) as products_sold
@@ -16,7 +17,7 @@ SELECT productname, (EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) 
 FROM ecommerce
 WHERE (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) = 2019
 GROUP BY productname,(EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))
-ORDER BY productname, (EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
+ORDER BY productname asc;
 
 --4.Write a sql query to count the customers from each country?
 
@@ -26,6 +27,6 @@ group by country;
 
 --5.Write a sql query to list all the unique productnames sold from each year?
 
-SELECT DISTINCT (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS Year, productname
+SELECT DISTINCT(EXTRACT(YEAR FROM TO_DATE(PURCHASE_DATE,'YYYY-MM-DD'))) AS Year, productname
 FROM ecommerce
-ORDER BY(EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
+ORDER BY year;
