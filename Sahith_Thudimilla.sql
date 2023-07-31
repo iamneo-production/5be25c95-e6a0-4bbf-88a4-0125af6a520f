@@ -1,4 +1,3 @@
-
 -- 1 Write a SQL query to how many products were sold in February 2019.
 
 SELECT COUNT(*) AS products_sold FROM ecommerce
