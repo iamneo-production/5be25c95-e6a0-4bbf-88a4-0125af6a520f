@@ -29,4 +29,4 @@ group by country;
 
 SELECT DISTINCT(EXTRACT(YEAR FROM TO_DATE(PURCHASE_DATE,'YYYY-MM-DD'))) AS Year, productname
 FROM ecommerce
-ORDER BY year;
+ORDER BY year asc;
