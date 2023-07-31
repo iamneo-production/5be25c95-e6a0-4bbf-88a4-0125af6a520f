@@ -1,4 +1,3 @@
-
 -- 1 Write a SQL query to how many products were sold in February 2019.
 SELECT COUNT(*) AS
 products_sold FROM ecommerce
@@ -30,8 +29,7 @@ SELECT country,COUNT(customerno) AS No_of_Customers FROM
 ecommerce
 GROUP BY country;
 
-
--- 5 Write a SQL query to list all the unique  the product names sold from each year.
+-- 5 Write a SQL query to list all the unique product names sold from each year.
 SELECT DISTINCT (EXTRACT(YEAR FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS Year, productname
 FROM ecommerce
