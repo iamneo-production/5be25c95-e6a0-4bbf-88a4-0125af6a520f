@@ -39,4 +39,5 @@ FROM ecommerce
 ORDER BY
 (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
 
+
 -- checking
