@@ -5,7 +5,7 @@ WHERE (EXTRACT(MONTH FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))  = 2 and (EXTRACT(YEAR FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))  = 2019;
 
--- 2 Write a SQL query to Totalsales amount in each year.
+-- 2 Write a SQL query to Totalsales amount in the each year.
 SELECT (EXTRACT(YEAR FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS YEAR ,SUM(price*quantity) as totalsale
 FROM ecommerce
