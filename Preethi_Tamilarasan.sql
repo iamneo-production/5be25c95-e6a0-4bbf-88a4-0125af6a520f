@@ -11,7 +11,7 @@ SELECT (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS YEAR ,SUM(p
 FROM ecommerce
 GROUP BY (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
 
---3.Write a sql query to what was  total sales amount of each product month_wise basis in the year 2019?
+--3.Write a sql query to what was  total sales amount of each product month_wise basis in  year 2019?
 
 SELECT productname, (EXTRACT(MONTH FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS month ,SUM(price*quantity) AS sales
 FROM ecommerce
