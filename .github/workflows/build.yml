@@ -2,11 +2,7 @@ name: Build
 'on':
   push:
     branches:
-<<<<<<< HEAD
-      - main
-=======
-       - '*'
->>>>>>> dffc99cb8f055f93f1be0adf9a7458d8bcb1bfda
+      - '*'
   pull_request:
     types:
       - opened
@@ -26,23 +22,9 @@ jobs:
           java-version: 11
       - name: Build and analyze
         env:
-<<<<<<< HEAD
-<<<<<<< HEAD
           GITHUB_TOKEN: 5be25c95-e6a0-4bbf-88a4-0125af6a520f
-=======
-          GITHUB_TOKEN: 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
->>>>>>> dffc99cb8f055f93f1be0adf9a7458d8bcb1bfda
           SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
         run: >-
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.projectKey=iamneo-production_5be25c95-e6a0-4bbf-88a4-0125af6a520f
           -Dsonar.login=811c9a490983734401ba4e491eaefc8bfa7281de
-=======
-          GITHUB_TOKEN: 1f06796f-2e03-4530-a21d-ef77cdbee8df
-<<<<<<< HEAD
-          SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
-=======
-          SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
->>>>>>> 2a6c4e2762563bc1eb2f3e2bc00fa36f684a5a25
->>>>>>> 55b7f26604287b32b7874d102a8c6be8d91800a7
-
