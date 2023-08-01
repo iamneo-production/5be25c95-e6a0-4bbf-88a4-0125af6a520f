@@ -9,8 +9,7 @@ TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) = 2019;
 SELECT (EXTRACT(YEAR FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS YEAR ,SUM(price*quantity) as totalsale
 FROM ecommerce
-GROUP BY (EXTRACT(YEAR FROM
-TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
+GROUP BY (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
 
 -- 3 Write a SQL query to what was the total sales amount of each product month-wise basis in the year 2019.
 SELECT productname,
@@ -21,8 +20,7 @@ WHERE (EXTRACT(YEAR FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) = 2019
 GROUP BY productname,(EXTRACT(MONTH
 FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')))
-ORDER BY productname, (EXTRACT(MONTH
-FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
+ORDER BY productname asc;
 
 -- 4 Write a SQL query to count the customers from each country.
 SELECT country,COUNT(customerno) AS No_of_Customers FROM
@@ -33,5 +31,4 @@ GROUP BY country;
 SELECT DISTINCT (EXTRACT(YEAR FROM
 TO_DATE("PURCHASE_DATE",'YYYY-MM-DD'))) AS Year, productname
 FROM ecommerce
-ORDER BY
-(EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
+ORDER BY (EXTRACT(YEAR FROM TO_DATE("PURCHASE_DATE",'YYYY-MM-DD')));
